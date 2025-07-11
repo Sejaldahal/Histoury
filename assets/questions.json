@@ -1,0 +1,17 @@
+[
+  {
+    "question": "Who was the first king of unified Nepal?",
+    "answers": ["Prithvi Narayan Shah", "Birendra Shah", "Tribhuvan Shah", "Mahendra Shah"],
+    "correct": 0
+  },
+  {
+    "question": "In which year was Nepal declared a federal democratic republic?",
+    "answers": ["2006", "2008", "2010", "2012"],
+    "correct": 1
+  },
+  {
+    "question": "Which river is considered sacred in Nepal?",
+    "answers": ["Bagmati", "Koshi", "Gandak", "Karnali"],
+    "correct": 0
+  }
+]
