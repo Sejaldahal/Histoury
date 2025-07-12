@@ -78,6 +78,14 @@ flutter:
     - assets/wrong.mp3
     - assets/PNS.wav
     - assets/greetings.wav
+    - assets/1.wav
+    - assets/2.wav
+    - assets/3.wav
+    - assets/4.wav
+    - assets/5.wav
+    - assets/6.wav
+    - assets/7.wav
+    - assets/8.wav
 
     - assets/bg.wav
 
