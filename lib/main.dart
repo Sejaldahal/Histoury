@@ -18,7 +18,7 @@ import 'pages/games/guesswho.dart';
 
 
 
->>>>>>> c5eef2d (guess who added)
+
 import 'pages/games/games_page.dart';
 import 'pages/learn_history/temples_page.dart';
 import 'pages/learn_history/historical_figures_page.dart';
@@ -62,9 +62,7 @@ class MyApp extends StatelessWidget {
 
 
 
-        '/figures': (context) => const HistoricalFiguresPage(),
-        '/ar': (context) => const ARModelsListScreen(),
-        // '/timeline': (context) => const _ARModelsListScreen(),
+
       },
     );
   }
