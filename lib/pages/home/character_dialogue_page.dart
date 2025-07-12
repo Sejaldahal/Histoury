@@ -77,12 +77,13 @@ class _CharacterDialoguePageState extends State<CharacterDialoguePage> {
 
                       // 🕰 Explore Timeline
                       OptionButton(
-                        text: "🕰 Explore Timeline",
+                        text: "3D Fieldtrip",
                         onTap: () {
-                          Navigator.pushNamed(context, '/timeline');
+                          Navigator.pushNamed(context, '/ar');
                         },
                       ),
                     ],
+
                   ),
                 ),
 

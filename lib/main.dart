@@ -2,14 +2,20 @@ import 'package:flutter/material.dart';
 import 'pages/home/character_dialogue_page.dart';
 import 'pages/games/quiz_page.dart';
 import 'pages/games/puzzle_page.dart';
-import 'pages/history_page.dart';
+import 'pages/learn_history/historical_figures_page.dart';
+import 'pages/learn_history/temples_page.dart';
+import 'package:flutter/material.dart';
+import 'pages/learn_history/learn_history_page.dart';
+
+import 'pages/ar/screen_ar.dart';
+
 
 
 import 'pages/games/games_page.dart';
 import 'pages/games/quiz_page.dart';
 import 'pages/games/puzzle_page.dart';
 
-import 'pages/learn_history/learn_history_page.dart';
+
 import 'pages/learn_history/temples_page.dart';
 import 'pages/learn_history/historical_figures_page.dart';
 
@@ -38,10 +44,15 @@ class MyApp extends StatelessWidget {
         '/games': (context) => const GamesPage(),
         '/quiz': (context) => const QuizPage(),
         '/puzzle': (context) => const PuzzlePage(),
+        '/learn_history': (context) => const TemplesPage(),
         '/history': (context) => const LearnHistoryPage(),
         '/temples': (context) => const TemplesPage(),
+
+
         '/figures': (context) => const HistoricalFiguresPage(),
-        '/timeline': (context) => const TimelinePage(),
+        '/ar': (context) => const ARModelsListScreen(),
+        // '/timeline': (context) => const _ARModelsListScreen(),
+
       },
     );
   }
