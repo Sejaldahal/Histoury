@@ -2,7 +2,7 @@
 **Histoury** is a mobile application developed in Flutter to make Nepalese history engaging and accessible through gamification, storytelling, and technology. Created for the **Deerwalk Hackathon 2025**, the app focuses on education through fun and interaction — blending the past with innovation.
 
 ## 📱 Overview
-> A gamified historical learning app focused on Nepal’s rich heritage, rulers, culture, and architecture — built to inspire curiosity and pride in users through interactive features.
+A gamified historical learning app focused on Nepal’s rich heritage, rulers, culture, and architecture — built to inspire curiosity and pride in users through interactive features.
 
 ## 🎮 Key Features
 
