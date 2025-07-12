@@ -16,6 +16,7 @@ import 'pages/learn_history/historical_figures_page.dart';
 import 'pages/timeline/timeline_page.dart';
 import 'pages/home/character_dialogue_page.dart';
 
+import 'pages/match_game_page.dart';
 
 
 void main() {
