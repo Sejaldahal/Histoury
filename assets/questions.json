@@ -1,17 +1,542 @@
 [
   {
-    "question": "Who was the first king of unified Nepal?",
-    "answers": ["Prithvi Narayan Shah", "Birendra Shah", "Tribhuvan Shah", "Mahendra Shah"],
+    "category": "Historical Figures",
+    "question": "Who unified Nepal?",
+    "answers": ["Prithvi Narayan Shah", "Mahendra Shah", "Bhimsen Thapa", "Birendra Shah"],
     "correct": 0
   },
   {
-    "question": "In which year was Nepal declared a federal democratic republic?",
-    "answers": ["2006", "2008", "2010", "2012"],
+    "category": "Historical Figures",
+    "question": "Who was the first Rana Prime Minister?",
+    "answers": ["Chandra Shamsher", "Jung Bahadur Rana", "Dev Shamsher", "Mohan Shamsher"],
     "correct": 1
   },
   {
-    "question": "Which river is considered sacred in Nepal?",
-    "answers": ["Bagmati", "Koshi", "Gandak", "Karnali"],
+    "category": "Historical Figures",
+    "question": "Who was known as the 'Iron Man of Nepal'?",
+    "answers": ["Bhimsen Thapa", "Jung Bahadur Rana", "Chandra Shamsher", "Prithvi Narayan Shah"],
+    "correct": 0
+  },
+  {
+    "category": "Historical Figures",
+    "question": "Which king abolished the Panchayat system?",
+    "answers": ["King Mahendra", "King Birendra", "King Gyanendra", "King Tribhuvan"],
+    "correct": 1
+  },
+  {
+    "category": "Historical Figures",
+    "question": "Who was the first President of Nepal?",
+    "answers": ["Ram Baran Yadav", "Bidhya Devi Bhandari", "K.P. Sharma Oli", "Girija Prasad Koirala"],
+    "correct": 0
+  },
+  {
+    "category": "Historical Figures",
+    "question": "Which Rana ruler was known for modernizing Nepal?",
+    "answers": ["Dev Shamsher", "Chandra Shamsher", "Bir Shamsher", "Juddha Shamsher"],
+    "correct": 1
+  },
+  {
+    "category": "Historical Figures",
+    "question": "Who was the founder of the Nepali Congress?",
+    "answers": ["B.P. Koirala", "Ganesh Man Singh", "Krishna Prasad Bhattarai", "Matrika Prasad Koirala"],
+    "correct": 0
+  },
+  {
+    "category": "Historical Figures",
+    "question": "Which king fled to India during the Rana regime?",
+    "answers": ["King Tribhuvan", "King Mahendra", "King Birendra", "King Gyanendra"],
+    "correct": 0
+  },
+  {
+    "category": "Historical Figures",
+    "question": "Who was the last Rana Prime Minister?",
+    "answers": ["Mohan Shamsher", "Padma Shamsher", "Chandra Shamsher", "Juddha Shamsher"],
+    "correct": 0
+  },
+  {
+    "category": "Historical Figures",
+    "question": "Which leader is known as the 'Father of Democracy' in Nepal?",
+    "answers": ["Ganesh Man Singh", "B.P. Koirala", "Krishna Prasad Bhattarai", "Girija Prasad Koirala"],
+    "correct": 0
+  },
+  {
+    "category": "Historical Figures",
+    "question": "Who was the first woman President of Nepal?",
+    "answers": ["Bidhya Devi Bhandari", "Sahana Pradhan", "Onsari Gharti", "Dila Sangraula"],
+    "correct": 0
+  },
+  {
+    "category": "Historical Figures",
+    "question": "Which historical figure is known as 'Amar Singh Thapa'?",
+    "answers": ["A Gurkha General", "A Rana ruler", "A Malla king", "A British officer"],
+    "correct": 0
+  },
+  {
+    "category": "Historical Figures",
+    "question": "Who was the architect of the 1950 revolution in Nepal?",
+    "answers": ["Tanka Prasad Acharya", "B.P. Koirala", "Matrika Prasad Koirala", "Ganesh Man Singh"],
+    "correct": 0
+  },
+  {
+    "category": "Historical Figures",
+    "question": "Which king introduced the Panchayat system?",
+    "answers": ["King Mahendra", "King Tribhuvan", "King Birendra", "King Gyanendra"],
+    "correct": 0
+  },
+  {
+    "category": "Historical Figures",
+    "question": "Who was the first Prime Minister of Nepal after the 1990 revolution?",
+    "answers": ["Krishna Prasad Bhattarai", "Girija Prasad Koirala", "Man Mohan Adhikari", "Lokendra Bahadur Chand"],
+    "correct": 0
+  },
+  {
+    "category": "Historical Sites",
+    "question": "Which temple is located in Bhaktapur?",
+    "answers": ["Nyatapola", "Swayambhunath", "Manakamana", "Pashupatinath"],
+    "correct": 0
+  },
+  {
+    "category": "Historical Sites",
+    "question": "Where is the Swayambhunath Stupa located?",
+    "answers": ["Bhaktapur", "Lalitpur", "Kathmandu", "Pokhara"],
+    "correct": 2
+  },
+  {
+    "category": "Historical Sites",
+    "question": "Which UNESCO World Heritage Site is known as the 'Monkey Temple'?",
+    "answers": ["Swayambhunath", "Boudhanath", "Pashupatinath", "Changu Narayan"],
+    "correct": 0
+  },
+  {
+    "category": "Historical Sites",
+    "question": "Where is the birthplace of Lord Buddha located?",
+    "answers": ["Lumbini", "Kapilvastu", "Kushinagar", "Bodhgaya"],
+    "correct": 0
+  },
+  {
+    "category": "Historical Sites",
+    "question": "Which ancient city is known for its 55-window palace?",
+    "answers": ["Bhaktapur", "Kathmandu", "Lalitpur", "Gorkha"],
+    "correct": 0
+  },
+  {
+    "category": "Historical Sites",
+    "question": "Where is the Changu Narayan Temple located?",
+    "answers": ["Bhaktapur", "Kathmandu", "Lalitpur", "Kavre"],
+    "correct": 0
+  },
+  {
+    "category": "Historical Sites",
+    "question": "Which stupa is the largest in Nepal?",
+    "answers": ["Boudhanath", "Swayambhunath", "Kirtipur Stupa", "Namo Buddha"],
+    "correct": 0
+  },
+  {
+    "category": "Historical Sites",
+    "question": "Where is the Gorkha Durbar located?",
+    "answers": ["Gorkha", "Kathmandu", "Pokhara", "Chitwan"],
+    "correct": 0
+  },
+  {
+    "category": "Historical Sites",
+    "question": "Which palace complex is located in Kathmandu Durbar Square?",
+    "answers": ["Hanuman Dhoka", "55-Window Palace", "Patan Palace", "Bhaktapur Palace"],
+    "correct": 0
+  },
+  {
+    "category": "Historical Sites",
+    "question": "Where is the Krishna Mandir located?",
+    "answers": ["Patan", "Kathmandu", "Bhaktapur", "Gorkha"],
+    "correct": 0
+  },
+  {
+    "category": "Historical Sites",
+    "question": "Which temple is dedicated to Lord Shiva in Kathmandu?",
+    "answers": ["Pashupatinath", "Swayambhunath", "Changu Narayan", "Budhanilkantha"],
+    "correct": 0
+  },
+  {
+    "category": "Historical Sites",
+    "question": "Where is the Sleeping Vishnu statue located?",
+    "answers": ["Budhanilkantha", "Pashupatinath", "Swayambhunath", "Changu Narayan"],
+    "correct": 0
+  },
+  {
+    "category": "Historical Sites",
+    "question": "Which fort is associated with Prithvi Narayan Shah?",
+    "answers": ["Gorkha Fort", "Nuwakot Fort", "Sindhuli Fort", "Makwanpur Fort"],
+    "correct": 0
+  },
+  {
+    "category": "Historical Sites",
+    "question": "Where is the Taleju Temple located?",
+    "answers": ["Kathmandu Durbar Square", "Patan Durbar Square", "Bhaktapur Durbar Square", "Gorkha Durbar"],
+    "correct": 0
+  },
+  {
+    "category": "Historical Sites",
+    "question": "Which archaeological site represents the Lichhavi period?",
+    "answers": ["Changu Narayan", "Swayambhunath", "Boudhanath", "Pashupatinath"],
+    "correct": 0
+  },
+  {
+    "category": "Nepalese History Timeline",
+    "question": "When was Nepal declared a republic?",
+    "answers": ["2006", "2007", "2008", "2010"],
+    "correct": 2
+  },
+  {
+    "category": "Nepalese History Timeline",
+    "question": "What year was the Treaty of Sugauli signed?",
+    "answers": ["1814", "1816", "1830", "1857"],
+    "correct": 1
+  },
+  {
+    "category": "Nepalese History Timeline",
+    "question": "When did the Rana regime begin?",
+    "answers": ["1846", "1850", "1860", "1870"],
+    "correct": 0
+  },
+  {
+    "category": "Nepalese History Timeline",
+    "question": "In which year did the Anglo-Nepal War begin?",
+    "answers": ["1814", "1815", "1816", "1820"],
+    "correct": 0
+  },
+  {
+    "category": "Nepalese History Timeline",
+    "question": "When was the first constitution of Nepal promulgated?",
+    "answers": ["1948", "1950", "1959", "1962"],
+    "correct": 2
+  },
+  {
+    "category": "Nepalese History Timeline",
+    "question": "When did the Kot Massacre occur?",
+    "answers": ["1846", "1850", "1855", "1860"],
+    "correct": 0
+  },
+  {
+    "category": "Nepalese History Timeline",
+    "question": "In which year was the Panchayat system introduced?",
+    "answers": ["1960", "1962", "1965", "1970"],
+    "correct": 1
+  },
+  {
+    "category": "Nepalese History Timeline",
+    "question": "When did the People's Movement (Jana Andolan) I occur?",
+    "answers": ["1989", "1990", "1991", "1992"],
+    "correct": 1
+  },
+  {
+    "category": "Nepalese History Timeline",
+    "question": "When was the new federal constitution of Nepal promulgated?",
+    "answers": ["2013", "2015", "2017", "2018"],
+    "correct": 1
+  },
+  {
+    "category": "Nepalese History Timeline",
+    "question": "When did the Maoist insurgency begin?",
+    "answers": ["1994", "1996", "1998", "2000"],
+    "correct": 1
+  },
+  {
+    "category": "Nepalese History Timeline",
+    "question": "When was the Comprehensive Peace Agreement signed?",
+    "answers": ["2005", "2006", "2007", "2008"],
+    "correct": 1
+  },
+  {
+    "category": "Nepalese History Timeline",
+    "question": "When did the April Revolution occur?",
+    "answers": ["2005", "2006", "2007", "2008"],
+    "correct": 1
+  },
+  {
+    "category": "Nepalese History Timeline",
+    "question": "When was the monarchy abolished in Nepal?",
+    "answers": ["2006", "2007", "2008", "2009"],
+    "correct": 2
+  },
+  {
+    "category": "Nepalese History Timeline",
+    "question": "When was the Constituent Assembly first elected?",
+    "answers": ["2007", "2008", "2009", "2010"],
+    "correct": 1
+  },
+  {
+    "category": "Nepalese History Timeline",
+    "question": "When did Nepal join the United Nations?",
+    "answers": ["1950", "1955", "1960", "1965"],
+    "correct": 1
+  },
+  {
+    "category": "World History",
+    "question": "Who discovered America in 1492?",
+    "answers": ["Christopher Columbus", "Vasco da Gama", "Napoleon", "Julius Caesar"],
+    "correct": 0
+  },
+  {
+    "category": "World History",
+    "question": "Which country built the Great Wall?",
+    "answers": ["India", "China", "Japan", "Mongolia"],
+    "correct": 1
+  },
+  {
+    "category": "World History",
+    "question": "When did World War I begin?",
+    "answers": ["1912", "1914", "1916", "1918"],
+    "correct": 1
+  },
+  {
+    "category": "World History",
+    "question": "Which empire was ruled by Julius Caesar?",
+    "answers": ["Roman Empire", "Greek Empire", "Ottoman Empire", "Byzantine Empire"],
+    "correct": 0
+  },
+  {
+    "category": "World History",
+    "question": "When did the Berlin Wall fall?",
+    "answers": ["1987", "1989", "1991", "1993"],
+    "correct": 1
+  },
+  {
+    "category": "World History",
+    "question": "Which country was formerly known as Persia?",
+    "answers": ["Iraq", "Iran", "Turkey", "Afghanistan"],
+    "correct": 1
+  },
+  {
+    "category": "World History",
+    "question": "Who was the first person to walk on the moon?",
+    "answers": ["Neil Armstrong", "Buzz Aldrin", "John Glenn", "Yuri Gagarin"],
+    "correct": 0
+  },
+  {
+    "category": "World History",
+    "question": "Which ancient wonder of the world was located in Egypt?",
+    "answers": ["Great Pyramid of Giza", "Hanging Gardens", "Colossus of Rhodes", "Lighthouse of Alexandria"],
+    "correct": 0
+  },
+  {
+    "category": "World History",
+    "question": "When did the French Revolution begin?",
+    "answers": ["1789", "1790", "1791", "1792"],
+    "correct": 0
+  },
+  {
+    "category": "World History",
+    "question": "Which country gifted the Statue of Liberty to the United States?",
+    "answers": ["France", "Britain", "Spain", "Italy"],
+    "correct": 0
+  },
+  {
+    "category": "World History",
+    "question": "Who was the first Emperor of China?",
+    "answers": ["Qin Shi Huang", "Emperor Wu", "Kangxi", "Qianlong"],
+    "correct": 0
+  },
+  {
+    "category": "World History",
+    "question": "Which war ended with the Treaty of Versailles?",
+    "answers": ["World War I", "World War II", "Franco-Prussian War", "Napoleonic Wars"],
+    "correct": 0
+  },
+  {
+    "category": "World History",
+    "question": "When did the Soviet Union dissolve?",
+    "answers": ["1989", "1991", "1993", "1995"],
+    "correct": 1
+  },
+  {
+    "category": "World History",
+    "question": "Which civilization built Machu Picchu?",
+    "answers": ["Inca", "Maya", "Aztec", "Olmec"],
+    "correct": 0
+  },
+  {
+    "category": "World History",
+    "question": "When did India gain independence?",
+    "answers": ["1945", "1947", "1948", "1950"],
+    "correct": 1
+  },
+  {
+    "category": "Festivals and Traditions",
+    "question": "Which festival celebrates the return of cows in Kathmandu?",
+    "answers": ["Gai Jatra", "Dashain", "Tihar", "Buddha Jayanti"],
+    "correct": 0
+  },
+  {
+    "category": "Festivals and Traditions",
+    "question": "During which festival is Bhai Tika celebrated?",
+    "answers": ["Tihar", "Dashain", "Maghe Sankranti", "Lhosar"],
+    "correct": 0
+  },
+  {
+    "category": "Festivals and Traditions",
+    "question": "Which festival is known as the Festival of Lights?",
+    "answers": ["Tihar", "Dashain", "Holi", "Buddha Jayanti"],
+    "correct": 0
+  },
+  {
+    "category": "Festivals and Traditions",
+    "question": "What is the longest festival in Nepal?",
+    "answers": ["Dashain", "Tihar", "Indra Jatra", "Bisket Jatra"],
+    "correct": 0
+  },
+  {
+    "category": "Festivals and Traditions",
+    "question": "Which festival celebrates the victory of good over evil?",
+    "answers": ["Dashain", "Holi", "Tihar", "Shivaratri"],
+    "correct": 0
+  },
+  {
+    "category": "Festivals and Traditions",
+    "question": "During which festival is the Kumari pulled in a chariot?",
+    "answers": ["Indra Jatra", "Dashain", "Tihar", "Gai Jatra"],
+    "correct": 0
+  },
+  {
+    "category": "Festivals and Traditions",
+    "question": "Which festival marks the Nepali New Year?",
+    "answers": ["Baisakh 1", "Tihar", "Dashain", "Maghe Sankranti"],
+    "correct": 0
+  },
+  {
+    "category": "Festivals and Traditions",
+    "question": "What is celebrated during Maghe Sankranti?",
+    "answers": ["Sesame seeds and molasses", "Flying kites", "Worshipping cows", "Lighting lamps"],
+    "correct": 0
+  },
+  {
+    "category": "Festivals and Traditions",
+    "question": "Which festival is associated with Lord Shiva?",
+    "answers": ["Shivaratri", "Dashain", "Tihar", "Janai Purnima"],
+    "correct": 0
+  },
+  {
+    "category": "Festivals and Traditions",
+    "question": "During which festival do people play with colors?",
+    "answers": ["Holi", "Tihar", "Dashain", "Gai Jatra"],
+    "correct": 0
+  },
+  {
+    "category": "Festivals and Traditions",
+    "question": "Which festival celebrates the birthday of Lord Krishna?",
+    "answers": ["Krishna Janmashtami", "Dashain", "Tihar", "Shivaratri"],
+    "correct": 0
+  },
+  {
+    "category": "Festivals and Traditions",
+    "question": "What is the traditional greeting during Dashain?",
+    "answers": ["Namaste", "Dashain ko Shubhakamana", "Sat Sri Akal", "Adab"],
+    "correct": 1
+  },
+  {
+    "category": "Festivals and Traditions",
+    "question": "Which festival involves bathing in holy rivers?",
+    "answers": ["Chhath", "Dashain", "Tihar", "Holi"],
+    "correct": 0
+  },
+  {
+    "category": "Festivals and Traditions",
+    "question": "During which festival is Jal Jatra celebrated?",
+    "answers": ["Indra Jatra", "Dashain", "Tihar", "Gai Jatra"],
+    "correct": 0
+  },
+  {
+    "category": "Festivals and Traditions",
+    "question": "Which festival is celebrated by the Sherpa community?",
+    "answers": ["Lhosar", "Dashain", "Tihar", "Holi"],
+    "correct": 0
+  },
+  {
+    "category": "Random",
+    "question": "Which dynasty ruled before the Shahs?",
+    "answers": ["Malla", "Thakuri", "Lichhavi", "Rana"],
+    "correct": 0
+  },
+  {
+    "category": "Random",
+    "question": "Which province is Lumbini in?",
+    "answers": ["Lumbini Province", "Gandaki Province", "Bagmati Province", "Madhesh Province"],
+    "correct": 0
+  },
+  {
+    "category": "Random",
+    "question": "What is the highest peak in Nepal?",
+    "answers": ["Mount Everest", "Kanchenjunga", "Lhotse", "Makalu"],
+    "correct": 0
+  },
+  {
+    "category": "Random",
+    "question": "Which river is considered the holiest in Nepal?",
+    "answers": ["Bagmati", "Gandaki", "Koshi", "Karnali"],
+    "correct": 0
+  },
+  {
+    "category": "Random",
+    "question": "What is the national flower of Nepal?",
+    "answers": ["Rhododendron", "Lotus", "Jasmine", "Marigold"],
+    "correct": 0
+  },
+  {
+    "category": "Random",
+    "question": "Which is the largest lake in Nepal?",
+    "answers": ["Rara Lake", "Phewa Lake", "Begnas Lake", "Tilicho Lake"],
+    "correct": 0
+  },
+  {
+    "category": "Random",
+    "question": "What is the currency of Nepal?",
+    "answers": ["Nepalese Rupee", "Indian Rupee", "Bhutanese Ngultrum", "Bangladeshi Taka"],
+    "correct": 0
+  },
+  {
+    "category": "Random",
+    "question": "Which ethnic group is the largest in Nepal?",
+    "answers": ["Chhetri", "Brahmin", "Magar", "Tharu"],
+    "correct": 0
+  },
+  {
+    "category": "Random",
+    "question": "What is the national animal of Nepal?",
+    "answers": ["Cow", "Tiger", "Elephant", "Rhino"],
+    "correct": 0
+  },
+  {
+    "category": "Random",
+    "question": "Which language is the official language of Nepal?",
+    "answers": ["Nepali", "Newari", "Maithili", "Bhojpuri"],
+    "correct": 0
+  },
+  {
+    "category": "Random",
+    "question": "How many provinces are there in Nepal?",
+    "answers": ["7", "5", "6", "8"],
+    "correct": 0
+  },
+  {
+    "category": "Random",
+    "question": "Which national park is famous for one-horned rhinoceros?",
+    "answers": ["Chitwan National Park", "Sagarmatha National Park", "Langtang National Park", "Rara National Park"],
+    "correct": 0
+  },
+  {
+    "category": "Random",
+    "question": "What is the literacy rate of Nepal approximately?",
+    "answers": ["67%", "75%", "60%", "80%"],
+    "correct": 0
+  },
+  {
+    "category": "Random",
+    "question": "Which city is known as the 'City of Temples'?",
+    "answers": ["Kathmandu", "Bhaktapur", "Lalitpur", "Pokhara"],
+    "correct": 0
+  },
+  {
+    "category": "Random",
+    "question": "What is the traditional cap worn by Nepali men called?",
+    "answers": ["Dhaka Topi", "Bhadgaunle Topi", "Nepali Topi", "Gurung Topi"],
     "correct": 0
   }
 ]

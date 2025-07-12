@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'pages/learn_history/learn_history_page.dart';
 
 import 'pages/ar/screen_ar.dart';
+import 'pages/games/quiz_category_page.dart';
 
 
 
@@ -42,7 +43,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const CharacterDialoguePage(),
         '/games': (context) => const GamesPage(),
-        '/quiz': (context) => const QuizPage(),
+
+        '/quiz-categories': (context) => const QuizCategoryPage(),
         '/puzzle': (context) => const PuzzlePage(),
         '/learn_history': (context) => const TemplesPage(),
         '/history': (context) => const LearnHistoryPage(),
