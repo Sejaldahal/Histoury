@@ -56,6 +56,10 @@ class GamesPage extends StatelessWidget {
                 text: "🕵️‍♀️ Guess Who?",
                 onTap: () => Navigator.pushNamed(context, '/guesswho'),
               ),
+              GameOptionButton(
+                text: "🕵️‍♀️ Timeline Scramble?",
+                onTap: () => Navigator.pushNamed(context, '/timeline'),
+              ),
 
               const SizedBox(height: 16),
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:audioplayers/audioplayers.dart';
 
 class CharacterDialoguePage extends StatefulWidget {
@@ -74,6 +75,7 @@ class _CharacterDialoguePageState extends State<CharacterDialoguePage>
       'text': 'Library',
       'subtitle': 'Ancient wisdom awaits',
       'route': '/library',
+
       'icon': Icons.menu_book,
     },
     {

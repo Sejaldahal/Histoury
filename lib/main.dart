@@ -15,6 +15,8 @@ import 'pages/games/match_game_page.dart';
 import 'pages/ar/screen_ar.dart';
 import 'pages/games/quiz_category_page.dart';
 import 'pages/games/guesswho.dart';
+import 'pages/library.dart';
+import 'pages/games/timeline_scramble.dart';
 
 
 
@@ -53,6 +55,8 @@ class MyApp extends StatelessWidget {
         '/temples': (context) => const TemplesPage(),
         '/figures': (context) => const HistoricalFiguresPage(),
         '/ar': (context) => const ARModelsListScreen(),
+        '/library': (context) => const HistoryLibraryPage(),
+        '/timeline': (context) => const TimelineScramblePage(),
 
         '/match': (context) => MatchGamePage(),
         '/guesswho': (context) => GuessWhoGame(),
