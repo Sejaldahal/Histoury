@@ -1,7 +1,7 @@
-// quiz_page.dart (Updated)
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class QuizPage extends StatefulWidget {
   final String selectedCategory;
@@ -20,6 +20,7 @@ class _QuizPageState extends State<QuizPage> {
   bool _answered = false;
   int? _selectedIndex;
   bool _isLoading = true;
+  final AudioPlayer _audioPlayer = AudioPlayer();
 
   @override
   void initState() {
@@ -36,16 +37,15 @@ class _QuizPageState extends State<QuizPage> {
       List filtered = _allQuestions.where((q) => q['category'] == category).toList();
 
       if (filtered.isEmpty) {
-        // If no questions found for the category, show error
         setState(() {
           _isLoading = false;
         });
         return;
       }
 
-      filtered.shuffle(); // shuffle each time
+      filtered.shuffle();
       setState(() {
-        _filteredQuestions = filtered.take(5).toList(); // 5 random questions
+        _filteredQuestions = filtered.take(5).toList();
         _isLoading = false;
       });
     } catch (e) {
@@ -55,16 +55,21 @@ class _QuizPageState extends State<QuizPage> {
     }
   }
 
-  void _checkAnswer(int selected) {
+  void _checkAnswer(int selected) async {
     if (_answered) return;
 
     setState(() {
       _selectedIndex = selected;
       _answered = true;
-      if (selected == _filteredQuestions[_currentIndex]['correct']) {
-        _score++;
-      }
     });
+
+    // Play sound
+    if (selected == _filteredQuestions[_currentIndex]['correct']) {
+      _score++;
+      await _audioPlayer.play(AssetSource('correct.mp3'));
+    } else {
+      await _audioPlayer.play(AssetSource('wrong.mp3'));
+    }
   }
 
   void _nextQuestion() {
@@ -75,7 +80,6 @@ class _QuizPageState extends State<QuizPage> {
         _selectedIndex = null;
       });
     } else {
-      // Quiz completed, show results
       _showResults();
     }
   }
@@ -115,14 +119,13 @@ class _QuizPageState extends State<QuizPage> {
           TextButton(
             onPressed: () {
               Navigator.of(context).pop(); // Close dialog
-              Navigator.of(context).pop(); // Go back to category page
+              Navigator.of(context).pop(); // Go back
             },
             child: const Text("Back to Categories"),
           ),
           ElevatedButton(
             onPressed: () {
-              Navigator.of(context).pop(); // Close dialog
-              // Restart quiz
+              Navigator.of(context).pop();
               setState(() {
                 _currentIndex = 0;
                 _score = 0;
@@ -180,7 +183,6 @@ class _QuizPageState extends State<QuizPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Progress bar
               LinearProgressIndicator(
                 value: (_currentIndex + 1) / _filteredQuestions.length,
                 backgroundColor: Colors.white54,
@@ -188,8 +190,6 @@ class _QuizPageState extends State<QuizPage> {
                 minHeight: 8,
               ),
               const SizedBox(height: 20),
-
-              // Score display
               Text(
                 "Score: $_score / ${_filteredQuestions.length}",
                 style: const TextStyle(
@@ -199,8 +199,6 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               const SizedBox(height: 10),
-
-              // Question number
               Text(
                 "Question ${_currentIndex + 1} of ${_filteredQuestions.length}",
                 style: TextStyle(
@@ -209,8 +207,6 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               const SizedBox(height: 20),
-
-              // Question card
               Card(
                 elevation: 8,
                 shape: RoundedRectangleBorder(
@@ -229,8 +225,6 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               const SizedBox(height: 20),
-
-              // Answer options
               Expanded(
                 child: ListView.builder(
                   itemCount: q['answers'].length,
@@ -256,7 +250,6 @@ class _QuizPageState extends State<QuizPage> {
 
                     return Container(
                       margin: const EdgeInsets.symmetric(vertical: 6),
-                      width: double.infinity,
                       child: Container(
                         decoration: BoxDecoration(
                           color: buttonColor,
@@ -296,19 +289,13 @@ class _QuizPageState extends State<QuizPage> {
                   },
                 ),
               ),
-
               const SizedBox(height: 20),
-
-              // Next button
               if (_answered)
                 Center(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.deepPurple.shade400,
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 32,
-                        vertical: 12,
-                      ),
+                      padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(25),
                       ),
