@@ -8,7 +8,7 @@ class LearnHistoryPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text("📖 Learn History")),
       body: Padding(
-        padding: const EdgeInsets.all(24.0),
+        padding: const EdgeInsets.all(12.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
