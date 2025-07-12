@@ -52,18 +52,18 @@ class GamesPage extends StatelessWidget {
                 text: "🧩 Solve Puzzle",
                 onTap: () => Navigator.pushNamed(context, '/puzzle'),
               ),
+              GameOptionButton(
+                text: "🕵️‍♀️ Guess Who?",
+                onTap: () => Navigator.pushNamed(context, '/guesswho'),
+              ),
 
               const SizedBox(height: 16),
 
               // 🔤 Word Match (optional future idea)
               GameOptionButton(
                 text: "🔤 Word Match",
-                onTap: () {
-                  // Add navigation when ready
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text("Coming soon!")),
-                  );
-                },
+                onTap: ()=> Navigator.pushNamed(context, '/match'),
+
               ),
             ],
           ),
