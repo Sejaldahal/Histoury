@@ -1,4 +1,3 @@
-
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -225,105 +224,30 @@ class _HistoricalFiguresPageState extends State<HistoricalFiguresPage>
               ),
             ),
 
-            // Swipe Instructions and Action Buttons - Reduced padding
+            // Swipe Instructions - Reduced padding
             Container(
               padding: const EdgeInsets.fromLTRB(20, 8, 20, 16),
-              child: Column(
-                children: [
-                  // Instructions
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                    decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.8),
-                      borderRadius: BorderRadius.circular(15),
-                      border: Border.all(color: Colors.grey.shade300),
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.8),
+                  borderRadius: BorderRadius.circular(15),
+                  border: Border.all(color: Colors.grey.shade300),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(Icons.swipe, color: Colors.grey[600], size: 16),
+                    const SizedBox(width: 6),
+                    Text(
+                      'Swipe to explore • Tap for details',
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.grey[600],
+                      ),
                     ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Icon(Icons.swipe, color: Colors.grey[600], size: 16),
-                        const SizedBox(width: 6),
-                        Text(
-                          'Swipe to explore • Tap for details',
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: Colors.grey[600],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-
-                  const SizedBox(height: 12),
-
-                  // Action Buttons
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      // First Button (Previous)
-                      GestureDetector(
-                        onTap: () {
-                          _cardSwiperController.swipe(CardSwiperDirection.left);
-                        },
-                        child: Container(
-                          padding: const EdgeInsets.all(8),
-                          decoration: BoxDecoration(
-                            color: Colors.deepPurple.shade100,
-                            shape: BoxShape.circle,
-                            border: Border.all(color: Colors.deepPurple.shade300),
-                          ),
-                          child: Icon(
-                            Icons.arrow_back,
-                            color: Colors.deepPurple.shade600,
-                            size: 20,
-                          ),
-                        ),
-                      ),
-
-                      // Second Button (Info)
-                      GestureDetector(
-                        onTap: () {
-                          if (currentIndex < kingsData.length) {
-                            _showKingDetails(kingsData[currentIndex]);
-                          }
-                        },
-                        child: Container(
-                          padding: const EdgeInsets.all(8),
-                          decoration: BoxDecoration(
-                            color: Colors.deepPurple.shade100,
-                            shape: BoxShape.circle,
-                            border: Border.all(color: Colors.deepPurple.shade300),
-                          ),
-                          child: Icon(
-                            Icons.info,
-                            color: Colors.deepPurple.shade600,
-                            size: 20,
-                          ),
-                        ),
-                      ),
-
-                      // Third Button (Next)
-                      GestureDetector(
-                        onTap: () {
-                          _cardSwiperController.swipe(CardSwiperDirection.right);
-                        },
-                        child: Container(
-                          padding: const EdgeInsets.all(8),
-                          decoration: BoxDecoration(
-                            color: Colors.deepPurple.shade100,
-                            shape: BoxShape.circle,
-                            border: Border.all(color: Colors.deepPurple.shade300),
-                          ),
-                          child: Icon(
-                            Icons.arrow_forward,
-                            color: Colors.deepPurple.shade600,
-                            size: 20,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ],
