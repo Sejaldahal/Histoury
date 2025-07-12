@@ -53,12 +53,4 @@ Histoury aims to **educate** and **entertain** users — especially **students a
 
 ---
 
-## 🚀 Getting Started
 
-Follow these steps to run the app locally:
-
-### 🔁 Clone the Repository
-
-```bash
-git clone https://github.com/your-username/project-histoury.git
-cd project-histoury
