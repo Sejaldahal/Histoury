@@ -4,8 +4,28 @@
 ## 📱 Overview
 > A gamified historical learning app focused on Nepal’s rich heritage, rulers, culture, and architecture — built to inspire curiosity and pride in users through interactive features.
 
+## 🎮 Key Features
 
+### 🎲 Mini Games
+- **Quizzes** – Test your knowledge of Nepalese history.
+- **Slide Puzzles** – Solve puzzles of famous monuments and kings.
+- **Match Words** – Match names of events, places, and rulers with facts.
 
+### 🏯 Heritage Highlights
+- Explore major cultural sites like **Swayambhunath**, **Lumbini**, **Hanuman Dhoka**, and more.
+- Each site has **photo cards**, **facts**, and **stories**.
+
+### 👑 History Heroes
+- Discover life stories of great personalities such as:
+    - **Prithvi Narayan Shah**
+    - **Araniko**
+    - **King Tribhuvan**
+    - And many more!
+
+### 🕶️ AR Storytelling *(Optional/Future-ready)*
+- Use **Augmented Reality** to experience key historical moments or monuments in 3D.
+### 📚 E-Library
+- Browse through various different e-book and articles. 
 
 ## 🧠Purpose 
 Histoury aims to educate users, especially students and young learners, about **Nepalese history** through:
