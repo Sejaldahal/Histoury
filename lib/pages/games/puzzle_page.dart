@@ -79,7 +79,7 @@ class _PuzzlePageState extends State<PuzzlePage> {
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.white, width: 2),
                       image: DecorationImage(
-                        image: const AssetImage('assets/images/temple.jpg'),
+                        image: const AssetImage('assets/images/prithvi-narayan-shah_painting.jpg'),
                         fit: BoxFit.cover,
                         alignment: Alignment(
                           (tileValue % size) / (size - 1) * 2 - 1,
