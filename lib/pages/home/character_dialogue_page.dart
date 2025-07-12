@@ -1,170 +1,3 @@
-// import 'package:flutter/material.dart';
-// import 'package:audioplayers/audioplayers.dart';
-//
-// class CharacterDialoguePage extends StatefulWidget {
-//   const CharacterDialoguePage({super.key});
-//
-//   @override
-//   State<CharacterDialoguePage> createState() => _CharacterDialoguePageState();
-// }
-//
-// class _CharacterDialoguePageState extends State<CharacterDialoguePage> {
-//   bool showGameOptions = false; // controls submenu toggle
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: Stack(
-//         children: [
-//           // BACKGROUND IMAGE
-//           SizedBox.expand(
-//             child: Image.asset(
-//               'assets/images/background.jpg',
-//               fit: BoxFit.cover,
-//             ),
-//           ),
-//
-//           // DARK OVERLAY
-//           Container(
-//             color: Colors.black.withOpacity(0.4),
-//           ),
-//
-//           // MAIN CONTENT
-//           Padding(
-//             padding: const EdgeInsets.all(24.0),
-//             child: Row(
-//               children: [
-//                 // LEFT: Dialogue + Buttons
-//                 Expanded(
-//                   flex: 2,
-//                   child: Column(
-//                     mainAxisAlignment: MainAxisAlignment.center,
-//                     crossAxisAlignment: CrossAxisAlignment.start,
-//                     children: [
-//                       // DIALOGUE BOX
-//                       Container(
-//                         padding: const EdgeInsets.all(16),
-//                         margin: const EdgeInsets.only(bottom: 20),
-//                         decoration: BoxDecoration(
-//                           color: Colors.white.withOpacity(0.9),
-//                           borderRadius: BorderRadius.circular(16),
-//                           border: Border.all(color: Colors.deepPurple, width: 2),
-//                         ),
-//                         child: const Text(
-//                           "Greetings, young explorer! I am Prithvi Narayan Shah.\nWhat would you like to do?",
-//                           style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
-//                         ),
-//                       ),
-//
-//                       OptionButton(
-//                         text: "🎮 Play Games",
-//                         onTap: () {
-//                           Navigator.pushNamed(context, '/games');
-//                         },
-//                       ),
-//
-//
-//                       const SizedBox(height: 20),
-//
-//                       // 📖 Learn History
-//                       OptionButton(
-//                         text: "📖 Learn History",
-//                         onTap: () {
-//                           Navigator.pushNamed(context, '/history');
-//                         },
-//                       ),
-//
-//                       const SizedBox(height: 10),
-//
-//                       // 🕰 Explore Timeline
-//                       OptionButton(
-//                         text: "3D Fieldtrip",
-//                         onTap: () {
-//                           Navigator.pushNamed(context, '/ar');
-//                         },
-//                       ),
-//                     ],
-//
-//                   ),
-//                 ),
-//
-//                 // RIGHT: Character
-//                 Expanded(
-//                   flex: 1,
-//                   child: Align(
-//                     alignment: Alignment.centerRight,
-//                     child: Image.asset(
-//                       'assets/images/prithivi_narayan.jpg',
-//                       height: 400,
-//                     ),
-//                   ),
-//                 ),
-//               ],
-//             ),
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
-//
-// // Main option button
-// class OptionButton extends StatelessWidget {
-//   final String text;
-//   final VoidCallback onTap;
-//
-//   const OptionButton({super.key, required this.text, required this.onTap});
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return GestureDetector(
-//       onTap: onTap,
-//       child: Container(
-//         width: 250,
-//         padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 20),
-//         decoration: BoxDecoration(
-//           color: Colors.deepPurple.shade400,
-//           borderRadius: BorderRadius.circular(12),
-//           border: Border.all(color: Colors.white, width: 2),
-//         ),
-//         child: Text(
-//           text,
-//           style: const TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.w600),
-//         ),
-//       ),
-//     );
-//   }
-// }
-//
-// // Sub option (for submenu)
-// class SubOptionButton extends StatelessWidget {
-//   final String text;
-//   final VoidCallback onTap;
-//
-//   const SubOptionButton({super.key, required this.text, required this.onTap});
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return GestureDetector(
-//       onTap: onTap,
-//       child: Container(
-//         width: 220,
-//         padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
-//         decoration: BoxDecoration(
-//           color: Colors.deepPurple.shade200,
-//           borderRadius: BorderRadius.circular(10),
-//           border: Border.all(color: Colors.white70),
-//         ),
-//         child: Text(
-//           text,
-//           style: const TextStyle(fontSize: 15, color: Colors.white, fontWeight: FontWeight.w500),
-//         ),
-//       ),
-//     );
-//   }
-// }
-
-
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
 
@@ -180,13 +13,14 @@ class _CharacterDialoguePageState extends State<CharacterDialoguePage>
   bool showGameOptions = false;
   late AudioPlayer _audioPlayer;
   bool _isMuted = false;
-  bool _isPlaying = true;
+  bool _isPlaying = false;
   bool _showAudioControls = false;
 
   // Animation controllers
   late AnimationController _buttonAnimationController;
   late AnimationController _crownAnimationController;
   late AnimationController _backgroundAnimationController;
+  late AnimationController _royalHeaderAnimationController;
   late List<AnimationController> _individualButtonControllers;
   late List<Animation<double>> _buttonScaleAnimations;
   late List<Animation<double>> _buttonOpacityAnimations;
@@ -194,16 +28,18 @@ class _CharacterDialoguePageState extends State<CharacterDialoguePage>
   late Animation<double> _crownRotationAnimation;
   late Animation<double> _crownScaleAnimation;
   late Animation<double> _backgroundShimmerAnimation;
+  late Animation<double> _royalHeaderPulseAnimation;
+  late Animation<double> _royalHeaderRotationAnimation;
 
   // Button data with royal icons
   final List<Map<String, dynamic>> buttonData = [
     {
-      'text': '👑 Royal Games',
+      'text': 'Games',
       'route': '/games',
       'icon': Icons.games,
     },
     {
-      'text': '📜 Royal Chronicles',
+      'text': 'Chronicles',
       'route': '/history',
       'icon': Icons.history_edu,
     },
@@ -217,37 +53,37 @@ class _CharacterDialoguePageState extends State<CharacterDialoguePage>
   // Royal features data
   final List<Map<String, dynamic>> royalFeatures = [
     {
-      'text': '🏰 Royal Palace',
+      'text': 'Royal Palace',
       'subtitle': 'Explore the magnificent palace',
       'route': '/palace',
       'icon': Icons.castle,
     },
     {
-      'text': '👑 Crown Jewels',
+      'text': 'Crown Jewels',
       'subtitle': 'Discover precious artifacts',
       'route': '/jewels',
       'icon': Icons.diamond,
     },
     {
-      'text': '🎭 Royal Court',
+      'text': 'Court',
       'subtitle': 'Meet the royal advisors',
       'route': '/court',
       'icon': Icons.people,
     },
     {
-      'text': '📚 Royal Library',
+      'text': 'Library',
       'subtitle': 'Ancient wisdom awaits',
       'route': '/library',
       'icon': Icons.menu_book,
     },
     {
-      'text': '🎪 Royal Entertainment',
+      'text': 'Entertainment',
       'subtitle': 'Jesters and performances',
       'route': '/entertainment',
       'icon': Icons.theater_comedy,
     },
     {
-      'text': '🗡️ Royal Armory',
+      'text': 'Armory',
       'subtitle': 'Legendary weapons & armor',
       'route': '/armory',
       'icon': Icons.security,
@@ -258,9 +94,9 @@ class _CharacterDialoguePageState extends State<CharacterDialoguePage>
   void initState() {
     super.initState();
     _audioPlayer = AudioPlayer();
-    _initializeAudio();
     _setupAnimations();
     _startAnimations();
+    _initializeBackgroundMusic();
   }
 
   void _setupAnimations() {
@@ -279,6 +115,12 @@ class _CharacterDialoguePageState extends State<CharacterDialoguePage>
     // Background shimmer animation
     _backgroundAnimationController = AnimationController(
       duration: const Duration(milliseconds: 4000),
+      vsync: this,
+    );
+
+    // Royal header animation controller
+    _royalHeaderAnimationController = AnimationController(
+      duration: const Duration(milliseconds: 2500),
       vsync: this,
     );
 
@@ -349,6 +191,23 @@ class _CharacterDialoguePageState extends State<CharacterDialoguePage>
       parent: _backgroundAnimationController,
       curve: Curves.easeInOut,
     ));
+
+    // Royal header animations
+    _royalHeaderPulseAnimation = Tween<double>(
+      begin: 1.0,
+      end: 1.05,
+    ).animate(CurvedAnimation(
+      parent: _royalHeaderAnimationController,
+      curve: Curves.easeInOut,
+    ));
+
+    _royalHeaderRotationAnimation = Tween<double>(
+      begin: 0.0,
+      end: 0.02,
+    ).animate(CurvedAnimation(
+      parent: _royalHeaderAnimationController,
+      curve: Curves.easeInOut,
+    ));
   }
 
   void _startAnimations() {
@@ -364,18 +223,24 @@ class _CharacterDialoguePageState extends State<CharacterDialoguePage>
     // Start crown animation
     _crownAnimationController.repeat(reverse: true);
     _backgroundAnimationController.repeat(reverse: true);
+    _royalHeaderAnimationController.repeat(reverse: true);
   }
 
-  Future<void> _initializeAudio() async {
+  // Initialize background music
+  Future<void> _initializeBackgroundMusic() async {
     try {
-      await _audioPlayer.setReleaseMode(ReleaseMode.stop);
-      await _audioPlayer.setVolume(0.5);
-      await _audioPlayer.play(AssetSource('greetings.wav'));
+      await _audioPlayer.setReleaseMode(ReleaseMode.loop);
+      await _audioPlayer.setVolume(0.3);
 
-      setState(() {
-        _isPlaying = true;
-      });
+      // Play background music
+      if (mounted) {
+        await _audioPlayer.play(AssetSource('bg.wav'));
+        setState(() {
+          _isPlaying = true;
+        });
+      }
 
+      // Listen for audio completion (though it should loop)
       _audioPlayer.onPlayerComplete.listen((event) {
         if (mounted) {
           setState(() {
@@ -384,7 +249,7 @@ class _CharacterDialoguePageState extends State<CharacterDialoguePage>
         }
       });
     } catch (e) {
-      debugPrint('Error initializing audio: $e');
+      debugPrint('Error initializing background music: $e');
       if (mounted) {
         setState(() {
           _isPlaying = false;
@@ -402,28 +267,10 @@ class _CharacterDialoguePageState extends State<CharacterDialoguePage>
       if (_isMuted) {
         await _audioPlayer.setVolume(0.0);
       } else {
-        await _audioPlayer.setVolume(0.5);
+        await _audioPlayer.setVolume(0.3);
       }
     } catch (e) {
       debugPrint('Error toggling mute: $e');
-    }
-  }
-
-  Future<void> _togglePlayPause() async {
-    try {
-      if (_isPlaying) {
-        await _audioPlayer.pause();
-        setState(() {
-          _isPlaying = false;
-        });
-      } else {
-        await _audioPlayer.play(AssetSource('PNS.wav'));
-        setState(() {
-          _isPlaying = true;
-        });
-      }
-    } catch (e) {
-      debugPrint('Error toggling play/pause: $e');
     }
   }
 
@@ -435,13 +282,21 @@ class _CharacterDialoguePageState extends State<CharacterDialoguePage>
 
   @override
   void dispose() {
-    _audioPlayer.dispose();
+    // Properly dispose all animation controllers
     _buttonAnimationController.dispose();
     _crownAnimationController.dispose();
     _backgroundAnimationController.dispose();
+    _royalHeaderAnimationController.dispose();
+
+    // Dispose individual button controllers
     for (var controller in _individualButtonControllers) {
       controller.dispose();
     }
+
+    // Properly dispose audio player
+    _audioPlayer.stop();
+    _audioPlayer.dispose();
+
     super.dispose();
   }
 
@@ -481,29 +336,6 @@ class _CharacterDialoguePageState extends State<CharacterDialoguePage>
             ),
           ),
 
-          // ROYAL CROWN DECORATION (Top Center)
-          // Positioned(
-          //   top: 80,
-          //   left: 0,
-          //   right: 0,
-          //   child: AnimatedBuilder(
-          //     animation: Listenable.merge([_crownRotationAnimation, _crownScaleAnimation]),
-          //     builder: (context, child) {
-          //       return Transform.rotate(
-          //         angle: _crownRotationAnimation.value,
-          //         child: Transform.scale(
-          //           scale: _crownScaleAnimation.value,
-          //           child: const Icon(
-          //             Icons.workspace_premium,
-          //             color: Color(0xFFFFD700),
-          //             size: 40,
-          //           ),
-          //         ),
-          //       );
-          //     },
-          //   ),
-          // ),
-
           // SETTINGS GEAR WITH ROYAL AUDIO CONTROLS (Top Right)
           Positioned(
             top: 40,
@@ -527,16 +359,6 @@ class _CharacterDialoguePageState extends State<CharacterDialoguePage>
                         ? Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        // Play/Pause Button
-                        GestureDetector(
-                          onTap: _togglePlayPause,
-                          child: Icon(
-                            _isPlaying ? Icons.pause : Icons.play_arrow,
-                            color: const Color(0xFFFFD700),
-                            size: 18,
-                          ),
-                        ),
-
                         // Music Note Indicator
                         Icon(
                           Icons.music_note,
@@ -577,26 +399,144 @@ class _CharacterDialoguePageState extends State<CharacterDialoguePage>
           // MAIN CONTENT
           Column(
             children: [
-              // TOP SECTION: Image with royal border
-
-// TOP SECTION: Image with simple border
+              // TOP SECTION: Royal Header with Crown and Ornaments
               Container(
                 height: MediaQuery.of(context).size.height * 0.3,
                 padding: const EdgeInsets.all(24.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: const Color(0xFFFFD700), width: 2),
-                  ),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(18),
-                    child: Image.asset(
-                      'assets/images/Greetings.png',
-                      fit: BoxFit.contain,
-                      height: double.infinity,
-                      width: double.infinity,
-                    ),
-                  ),
+                child: AnimatedBuilder(
+                  animation: Listenable.merge([
+                    _royalHeaderPulseAnimation,
+                    _royalHeaderRotationAnimation,
+                  ]),
+                  builder: (context, child) {
+                    return Transform.scale(
+                      scale: _royalHeaderPulseAnimation.value,
+                      child: Transform.rotate(
+                        angle: _royalHeaderRotationAnimation.value,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            gradient: RadialGradient(
+                              colors: [
+                                const Color(0xFFFFD700).withOpacity(0.3),
+                                const Color(0xFF4A2C8F).withOpacity(0.1),
+                                Colors.transparent,
+                              ],
+                              stops: const [0.0, 0.7, 1.0],
+                            ),
+                            borderRadius: BorderRadius.circular(20),
+                            border: Border.all(
+                              color: const Color(0xFFFFD700),
+                              width: 2,
+                            ),
+                          ),
+                          child: Stack(
+                            children: [
+                              // Main royal emblem
+                              Center(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    // Crown with gems
+                                    AnimatedBuilder(
+                                      animation: _crownScaleAnimation,
+                                      builder: (context, child) {
+                                        return Transform.scale(
+                                          scale: _crownScaleAnimation.value,
+                                          child: const Icon(
+                                            Icons.diamond,
+                                            size: 60,
+                                            color: Color(0xFFFFD700),
+                                          ),
+                                        );
+                                      },
+                                    ),
+                                    const SizedBox(height: 10),
+                                    // Royal title
+                                    const Text(
+                                      'HISTOURY',
+                                      style: TextStyle(
+                                        fontSize: 24,
+                                        fontWeight: FontWeight.bold,
+                                        color: Color(0xFFFFD700),
+                                        letterSpacing: 2,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 5),
+                                    Text(
+                                      'Enter the Realm of Wonders',
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        color: Colors.white.withOpacity(0.9),
+                                        letterSpacing: 1,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+
+                              // Decorative corner elements
+                              Positioned(
+                                top: 10,
+                                left: 10,
+                                child: Icon(
+                                  Icons.star,
+                                  size: 20,
+                                  color: const Color(0xFFFFD700).withOpacity(0.7),
+                                ),
+                              ),
+                              Positioned(
+                                top: 10,
+                                right: 10,
+                                child: Icon(
+                                  Icons.star,
+                                  size: 20,
+                                  color: const Color(0xFFFFD700).withOpacity(0.7),
+                                ),
+                              ),
+                              Positioned(
+                                bottom: 10,
+                                left: 10,
+                                child: Icon(
+                                  Icons.star,
+                                  size: 20,
+                                  color: const Color(0xFFFFD700).withOpacity(0.7),
+                                ),
+                              ),
+                              Positioned(
+                                bottom: 10,
+                                right: 10,
+                                child: Icon(
+                                  Icons.star,
+                                  size: 20,
+                                  color: const Color(0xFFFFD700).withOpacity(0.7),
+                                ),
+                              ),
+
+                              // Royal ornamental streaks
+                              Positioned(
+                                top: 30,
+                                left: 0,
+                                right: 0,
+                                child: CustomPaint(
+                                  size: Size(double.infinity, 20),
+                                  painter: RoyalStreaksPainter(),
+                                ),
+                              ),
+                              Positioned(
+                                bottom: 30,
+                                left: 0,
+                                right: 0,
+                                child: CustomPaint(
+                                  size: Size(double.infinity, 20),
+                                  painter: RoyalStreaksPainter(),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    );
+                  },
                 ),
               ),
 
@@ -723,6 +663,38 @@ class _CharacterDialoguePageState extends State<CharacterDialoguePage>
       ),
     );
   }
+}
+
+// Custom painter for royal decorative streaks
+class RoyalStreaksPainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = const Color(0xFFFFD700).withOpacity(0.3)
+      ..strokeWidth = 2
+      ..style = PaintingStyle.stroke;
+
+    final path = Path();
+
+    // Create elegant curved streaks
+    path.moveTo(0, size.height / 2);
+    path.quadraticBezierTo(size.width / 4, 0, size.width / 2, size.height / 2);
+    path.quadraticBezierTo(size.width * 0.75, size.height, size.width, size.height / 2);
+
+    canvas.drawPath(path, paint);
+
+    // Add secondary streak
+    paint.color = const Color(0xFFFFD700).withOpacity(0.2);
+    final path2 = Path();
+    path2.moveTo(size.width * 0.1, size.height / 2);
+    path2.quadraticBezierTo(size.width * 0.3, size.height, size.width * 0.7, size.height / 2);
+    path2.quadraticBezierTo(size.width * 0.9, 0, size.width * 0.9, size.height / 2);
+
+    canvas.drawPath(path2, paint);
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
 
 // Royal main option button

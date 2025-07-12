@@ -30,8 +30,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  audioplayers: ^5.2.1
-  just_audio: ^0.9.35
+  audioplayers:
+  just_audio:
   flutter_svg: ^2.0.9
   ar_flutter_plugin_updated:
 
@@ -73,6 +73,7 @@ flutter:
     - assets/wrong.mp3
     - assets/PNS.wav
     - assets/greetings.wav
+    - assets/bg.wav
 
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
