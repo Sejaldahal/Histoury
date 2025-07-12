@@ -30,6 +30,13 @@ A gamified historical learning app focused on Nepal’s rich heritage, rulers, c
 ## 🧠Purpose 
 Histoury aims to educate users, especially students and young learners, about **Nepalese history** through:
 
+## ⚙️ Tech Stack
+- Flutter
+- Firebase 
+- Supabase
+- Unity, Blender
+- Dart
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
