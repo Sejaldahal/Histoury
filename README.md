@@ -61,9 +61,9 @@ flutter run
 - 👥 Multiplayer quiz mode
 
 ## 🧑‍💻Team 
-- Isha Bhattarai [https://www.linkedin.com/in/isha-bhattarai-856233299/]
-- Jeeni Shrestha [https://www.linkedin.com/in/jeeni-shrestha-a041912b5/]
-- Jenisha Shrestha [https://www.linkedin.com/in/jenisha-shrestha555/]
-- Sejal Dahal [https://www.linkedin.com/in/sejal-dahal-081022220/]
-- Ayusha Shrestha [https://www.linkedin.com/in/ayusha-shrestha-aayusha/]
+- [Isha Bhattarai] (https://www.linkedin.com/in/isha-bhattarai-856233299/)
+- [Jeeni Shrestha] (https://www.linkedin.com/in/jeeni-shrestha-a041912b5/)
+- [Jenisha Shrestha] (https://www.linkedin.com/in/jenisha-shrestha55/)
+- [Sejal Dahal] (https://www.linkedin.com/in/sejal-dahal-081022220/)
+- [Ayusha Shrestha] (https://www.linkedin.com/in/ayusha-shrestha-aayusha/)
 
