@@ -29,14 +29,6 @@ A gamified historical learning app focused on Nepal’s rich heritage, rulers, c
 
 ## 🧠Purpose 
 Histoury aims to educate users, especially students and young learners, about **Nepalese history** through:
-- Fun mini games
-  - Quizes
-  - Slide puzzles
-  - Match words
-- Heritage highlights
-- History heros
-- AR storytelling
-- E-library
 
 ## Getting Started
 
@@ -50,3 +42,28 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+### After flutter installation: 
+### Clone the Repo
+git clone https://github.com/your-username/project-histoury.git
+cd project-histoury
+
+### Install Dependencies
+flutter pub get
+
+### Run the App
+flutter run
+
+## Future Scope
+- 🎤 Voice Narration in Nepali
+- 🌐 Multi-language support (EN | NP)
+- 🥇 Leaderboard & XP Points
+- 👥 Multiplayer quiz mode
+
+## 🧑‍💻Team 
+- Isha Bhattarai [https://www.linkedin.com/in/isha-bhattarai-856233299/]
+- Jeeni Shrestha [https://www.linkedin.com/in/jeeni-shrestha-a041912b5/]
+- Jenisha Shrestha [https://www.linkedin.com/in/jenisha-shrestha555/]
+- Sejal Dahal [https://www.linkedin.com/in/sejal-dahal-081022220/]
+- Ayusha Shrestha [https://www.linkedin.com/in/ayusha-shrestha-aayusha/]
+
