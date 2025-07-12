@@ -6,6 +6,8 @@ import 'pages/learn_history/historical_figures_page.dart';
 import 'pages/learn_history/temples_page.dart';
 import 'pages/learn_history/learn_history_page.dart';
 
+
+
 import 'pages/ar/screen_ar.dart';
 import 'pages/games/quiz_category_page.dart';
 import 'pages/splash/splash_screen.dart';
@@ -57,6 +59,8 @@ class MyApp extends StatelessWidget {
         '/ar': (context) => const ARModelsListScreen(),
         '/library': (context) => const HistoryLibraryPage(),
         '/timeline': (context) => const TimelineScramblePage(),
+
+
 
         '/match': (context) => MatchGamePage(),
         '/guesswho': (context) => GuessWhoGame(),

@@ -52,16 +52,19 @@ class GamesPage extends StatelessWidget {
                 text: "🧩 Solve Puzzle",
                 onTap: () => Navigator.pushNamed(context, '/puzzle'),
               ),
+              const SizedBox(height: 16),
               GameOptionButton(
                 text: "🕵️‍♀️ Guess Who?",
                 onTap: () => Navigator.pushNamed(context, '/guesswho'),
               ),
+              const SizedBox(height: 16),
               GameOptionButton(
                 text: "🕵️‍♀️ Timeline Scramble?",
                 onTap: () => Navigator.pushNamed(context, '/timeline'),
               ),
-
               const SizedBox(height: 16),
+
+              // const SizedBox(height: 16),
 
               // 🔤 Word Match (optional future idea)
               GameOptionButton(
